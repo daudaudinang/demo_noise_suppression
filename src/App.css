@@ -13,6 +13,18 @@
   }
 }
 
+.App {
+  background-color: #282c34;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
