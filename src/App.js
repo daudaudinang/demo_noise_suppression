@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import ButtonGroup from './components/ButtonGroup';
-import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-import { getInputDevices } from './handlers';
-import Selector from './components/Selector';
 import { NoiseSuppressionProcessor } from "@shiguredo/noise-suppression";
+import { Button } from 'antd';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import './App.css';
+import ButtonGroup from './components/ButtonGroup';
+import Selector from './components/Selector';
+import { getInputDevices } from './handlers';
+import logo from './logo.svg';
 
 const assetsPath = "https://cdn.jsdelivr.net/npm/@shiguredo/noise-suppression@latest/dist";
 const processor = new NoiseSuppressionProcessor(assetsPath);
@@ -44,8 +44,6 @@ function App() {
     navigator.mediaDevices.getUserMedia({
       audio: {
         deviceId: selectedDevice || undefined,
-        sampleRate: {ideal: 48000},
-        sampleSize: {ideal: 480},
         channelCount: 1
       },
       video: false,
